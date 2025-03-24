@@ -2,14 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class KeyScript : MonoBehaviour, IItem
+public class Door : MonoBehaviour
 {
-    // Public properties for all Keys
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int Price { get; set; }
-    public Sprite Design { get; set; }
-    public int DoorID { get; set; }
+    public int doorID;
+    public bool open;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,5 +18,5 @@ public class KeyScript : MonoBehaviour, IItem
     {
         
     }
-
+    
 }

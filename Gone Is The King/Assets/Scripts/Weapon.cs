@@ -1,13 +1,14 @@
 using UnityEngine;
-
-public class ArmourScript : MonoBehaviour, IItem
+using System.Collections;
+using System.Collections.Generic;
+public class Weapon : MonoBehaviour, IItem
 {
-    // Public properties for all Armours
+    // Public properties for all Weapons
     public string Name { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
     public Sprite Design { get; set; }
-    public double Defence { get; set; }
+    public double Damage { get; set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,5 +21,5 @@ public class ArmourScript : MonoBehaviour, IItem
     {
         
     }
-
+    
 }

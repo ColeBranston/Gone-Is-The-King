@@ -2,14 +2,13 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class KeyScript : MonoBehaviour, IItem
+public class Passive : NonPlayerCharacter
 {
-    // Public properties for all Keys
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int Price { get; set; }
-    public Sprite Design { get; set; }
-    public int DoorID { get; set; }
+    // Public properties for all Consumables
+    public int[] position;
+    public Sprite design;
+    public int moveSpeed;
+    public ArrayList inventory;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,5 +21,10 @@ public class KeyScript : MonoBehaviour, IItem
     {
         
     }
+
+    public void MoveTo (int[] Position) {
+        this.position = Position;
+    }
+    public void Move(){}
 
 }
