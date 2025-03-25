@@ -6,12 +6,13 @@ public class Protagonist : MonoBehaviour, ICharacter, IAttackable
 {
     // Public properties for all Consumables
 
-    int[] position {get;set;}
-    int moveSpeed {get; set;}
-    Sprite design {get; set;}
+    public int[] position { get; set; }
+    public int moveSpeed {get; set;}
+    public Sprite design {get; set;}
     public string name;
-    public double health;
-    public double strength;
+    public double health { get; set; }
+    public double strength { get; set; }
+    public Armour armour { get; set; }
     public int exp;
     public Interaction interact;
     public ArrayList inventory; //will add/remove IItems to this

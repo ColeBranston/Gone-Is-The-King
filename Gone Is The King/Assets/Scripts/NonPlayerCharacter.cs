@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class NonPlayerCharacter : MonoBehaviour, ICharacter
 {
     // Public properties for all Consumables
-    public int[] position;
-    public Sprite design;
-    public int moveSpeed;
+    public int[] position {get;set;}
+    public Sprite design {get;set;}
+    public int moveSpeed {get;set;}
     public ArrayList inventory;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
