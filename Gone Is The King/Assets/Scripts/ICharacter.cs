@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public interface ICharacter
 {
-    int[] position;
-    int moveSpeed;
-    Sprite design;
+    int[] position { get; set; }
+    int moveSpeed { get; set; }
+    Sprite design { get; set; }
 }
