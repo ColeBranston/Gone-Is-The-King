@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public interface IAttackable
 {
-    double health;
-    double strength;
-    Armour armour; 
+    double health { get; set; }
+    double strength { get; set; }
+    Armour armour { get; set; }
 }
