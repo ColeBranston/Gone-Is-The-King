@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class KeyScripts : MonoBehaviour, IItem
+public class ArmourScript : MonoBehaviour, IItem
 {
-    // Public properties for all Keys
+    // Public properties for all Armours
     public string Name { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
     public Sprite Design { get; set; }
-    public int DoorID { get; set; }
+    public double Defence { get; set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
