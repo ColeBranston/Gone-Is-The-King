@@ -1,3 +1,4 @@
+using JonathansDemo;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -14,6 +15,9 @@ public class playerMovement : MonoBehaviour
 
     void Update()
     {
+        // locks player movement when dialogue playing
+        if (DialogueManager.DialogueIsPlaying)
+            return;
         // Get input from arrow keys or WASD
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
@@ -21,8 +25,10 @@ public class playerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (DialogueManager.DialogueIsPlaying)
+            return;
         // Apply movement to the Rigidbody2D
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * (speed * Time.fixedDeltaTime));
     }
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -1,3 +1,4 @@
+using JonathansDemo;
 using UnityEngine;
 
 public class animationController : MonoBehaviour
@@ -15,6 +16,9 @@ public class animationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // locks player movement when dialogue playing
+        if (DialogueManager.DialogueIsPlaying)
+            return;
         // Get input from both arrow keys and WASD using Axis
         xWalking = Input.GetAxisRaw("Horizontal"); // Returns -1, 0, or 1
         yWalking = Input.GetAxisRaw("Vertical");   // Returns -1, 0, or 1
