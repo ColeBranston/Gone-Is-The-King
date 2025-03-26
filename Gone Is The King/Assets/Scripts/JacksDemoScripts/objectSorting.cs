@@ -13,6 +13,6 @@ public class objectSorting : MonoBehaviour
     {
         // Dynamically adjust sorting order based on player's y-position
         spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100); // Adjust multiplier as needed
-        Debug.Log(spriteRenderer.sortingOrder);
+        // Debug.Log(spriteRenderer.sortingOrder);
     }
 }
