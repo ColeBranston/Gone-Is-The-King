@@ -1,13 +1,12 @@
 using UnityEngine;
 
-public class KeyScripts : MonoBehaviour, IItem
+public class ConsumableScript : MonoBehaviour, IItem
 {
-    // Public properties for all Keys
+    // Public properties for all Consumables
     public string Name { get; set; }
     public string Description { get; set; }
     public int Price { get; set; }
     public Sprite Design { get; set; }
-    public int DoorID { get; set; }
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +16,11 @@ public class KeyScripts : MonoBehaviour, IItem
 
     // Update is called once per frame
     void Update()
+    {
+        
+    }
+
+    public void statusEffect()
     {
         
     }
