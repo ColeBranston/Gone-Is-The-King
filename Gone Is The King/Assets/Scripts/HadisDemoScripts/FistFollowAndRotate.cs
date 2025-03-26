@@ -18,8 +18,7 @@ public class FistFollowAndRotate : MonoBehaviour
         // Lock the fist's position to the player's x and y.
         // Optionally, preserve its z-position if needed (e.g., for sorting order)
         Vector3 newPosition = playerTransform.position;
-        newPosition.x -= 0.085f;
-        newPosition.y += 0.1f;
+        newPosition.y += 0.14f;
         newPosition.z = transform.position.z; 
         transform.position = newPosition;
 
@@ -29,12 +28,12 @@ public class FistFollowAndRotate : MonoBehaviour
         mousePosition.z = transform.position.z; // Ensure z is consistent
 
         // Calculate the direction from the player to the mouse.
-        Vector3 direction = mousePosition - transform.position;
+        Vector3 direction = mousePosition - playerTransform.position;
 
         // Calculate the angle (in degrees) required for the rotation.
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         // Set the rotation so the fist points toward the mouse.
-        transform.rotation = Quaternion.Euler(0f, 0f, angle-90);
+        transform.rotation = Quaternion.Euler(0f, 0f, angle - 90);
     }
 }
