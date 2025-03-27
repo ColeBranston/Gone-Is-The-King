@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e6d32524367f3e44a9fd3d8274b6c88c, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7fc0a77c532d852499e6c7493e5e8a9a, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -80,7 +80,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 932eddeb7790d32448f1a10c46468011, type: 2}
+  m_Motion: {fileID: 7400000, guid: 138d38b18667df042ad656c50065af3b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -92,7 +92,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: playerAnimations
+  m_Name: playerAnimationsFemale
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: xWalking
@@ -261,7 +261,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 94ce7a0575b08e6419f6db0911a1b927, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6f10c7d23ed349a41a22677ee3ec6651, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -290,7 +290,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2c23911b6cdb629429fa70f52b5bdc01, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7520febf7426d8c49a4b9cf73e8d6593, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

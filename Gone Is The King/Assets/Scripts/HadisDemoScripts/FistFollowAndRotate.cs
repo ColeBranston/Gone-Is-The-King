@@ -3,7 +3,7 @@ using UnityEngine;
 public class FistFollowAndRotate : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform playerTransform; // Assign the player's transform
+    [SerializeField] private static Transform playerTransform; // Assign the player's transform
     [SerializeField] private Camera mainCamera;         // Assign the main camera (optional)
 
     private void Start()
@@ -34,5 +34,9 @@ public class FistFollowAndRotate : MonoBehaviour
 
         // Set the rotation so the fist points toward the mouse.
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+    }
+
+    public static void setPlayer(GameObject player){
+        playerTransform = player.transform;
     }
 }
