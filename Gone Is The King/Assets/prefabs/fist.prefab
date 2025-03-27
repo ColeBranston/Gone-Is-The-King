@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5570018767485258368}
   - component: {fileID: 9205864608084679412}
+  - component: {fileID: 7120938270563865841}
+  - component: {fileID: 2490421852776465041}
+  - component: {fileID: 325619155173252760}
   - component: {fileID: 4587688368853942524}
   m_Layer: 0
   m_Name: fist
@@ -27,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5431063297171096337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.614, y: 1.871, z: 0}
+  m_LocalPosition: {x: 0.3556555, y: 0.29253256, z: 0}
   m_LocalScale: {x: 0.396, y: 0.4737, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -88,6 +91,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7120938270563865841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431063297171096337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52f7c0ad670ca94b887e34d6daf134d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  mainCamera: {fileID: 0}
+--- !u!114 &2490421852776465041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431063297171096337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf3adb2939de034c8209849c65ad877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &325619155173252760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431063297171096337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12cbfa176744a6848874b8e612c98b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  punchOffset: 1
+  punchDuration: 0.2
 --- !u!95 &4587688368853942524
 Animator:
   serializedVersion: 7

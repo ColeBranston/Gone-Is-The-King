@@ -9,14 +9,11 @@ public class CharacterSpawnerScript : MonoBehaviour
         StartCoroutine(InstantiateCharacter());
     }
 
-    private IEnumerator InstantiateCharacter()
-    {
-        // Wait until the next frame to ensure everything is ready
-        yield return null;
+    private IEnumerator InstantiateCharacter(){
+    yield return null; // Wait until the next frame to ensure everything is ready
 
-        GameObject selectedCharacter = MenuScript.GetSelectedCharacter();
-        if (selectedCharacter != null)
-        {
+    GameObject selectedCharacter = MenuScript.GetSelectedCharacter();
+    if (selectedCharacter != null){
             // Instantiate the selected character at the position and rotation of this GameObject
             GameObject instantiatedCharacter = Instantiate(selectedCharacter, transform.position, transform.rotation);
 
@@ -25,14 +22,12 @@ public class CharacterSpawnerScript : MonoBehaviour
 
             // Find the CameraFollow script (assuming it's on the main camera)
             cameraFollow cameraFollow = Camera.main.GetComponent<cameraFollow>();
-            if (cameraFollow != null)
-            {
-                // Pass the instantiated character to the camera to follow
-                cameraFollow.SetPlayer(instantiatedCharacter);
+            if (cameraFollow != null){
+            // Pass the instantiated character to the camera to follow
+            cameraFollow.SetPlayer(instantiatedCharacter);
             }
-            else
-            {
-                Debug.LogError("CameraFollow not found on the main camera.");
+            else{
+            Debug.LogError("CameraFollow not found on the main camera.");
             }
         }
     }

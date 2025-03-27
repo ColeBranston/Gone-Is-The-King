@@ -8,6 +8,8 @@ public class cameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
+        if (player == null) return;
+
         // Desired position for the camera (keep Z constant for 2D)
         Vector3 desiredPosition = new Vector3(player.position.x + offset.x, player.position.y + offset.y, -5);
 
