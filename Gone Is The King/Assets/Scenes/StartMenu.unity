@@ -1023,6 +1023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 716c7ea526fd14845ae99019c782a0c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maleCharacterPrefab: {fileID: 2158780299222234457, guid: ecd26f84b1c1d0442b34df2027aa0765, type: 3}
+  femaleCharacterPrefab: {fileID: 8657694494395521562, guid: 951b659d950fb884a865e080ef6f9fcd, type: 3}
 --- !u!114 &1897464418
 MonoBehaviour:
   m_ObjectHideFlags: 0
