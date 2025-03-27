@@ -3449,6 +3449,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &377639136
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -336.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.09796902
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 343695444039434055, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5528496131050174165, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
+      propertyPath: m_Name
+      value: TreasureChest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b2a95413a2d2fb4e88bdd7b82f6c18d, type: 3}
 --- !u!1 &459201062
 GameObject:
   m_ObjectHideFlags: 0
@@ -20454,3 +20511,4 @@ SceneRoots:
   - {fileID: 1992239392}
   - {fileID: 600923220}
   - {fileID: 79328441}
+  - {fileID: 377639136}
