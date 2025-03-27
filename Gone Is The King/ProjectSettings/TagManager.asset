@@ -6,6 +6,13 @@ TagManager:
   tags:
   - object
   - DialogueNPC
+  - Shop
+  - +
+  - '-'
+  - buy
+  - countText
+  - Increase
+  - Decrease
   layers:
   - Default
   - TransparentFX
