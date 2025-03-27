@@ -16,8 +16,8 @@ namespace JonathansDemo
         private Queue<string> sentences;
         public static bool DialogueIsPlaying = false;
         private bool justStartedDialogue = false;
+        private float endDialogueDelay = 0.1f; // Delay in seconds after the dialogue ends
 
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
             sentences = new Queue<string>();
@@ -30,7 +30,7 @@ namespace JonathansDemo
                 if (justStartedDialogue)
                 {
                     justStartedDialogue = false;
-                    return;
+                    return; // Prevent input during the first frame of the dialogue
                 }
 
                 if (Input.GetKeyDown(KeyCode.E))
@@ -42,17 +42,23 @@ namespace JonathansDemo
 
         public void StartDialogue(Dialogue dialogue)
         {
+            if (DialogueIsPlaying)
+            {
+                Debug.LogWarning("Dialogue is already playing. Ignoring StartDialogue call.");
+                return; // Prevent starting a new dialogue while one is active
+            }
+
             DialogueIsPlaying = true;
             justStartedDialogue = true;
             dialoguePopup.Show();
 
             nameText.text = dialogue.name;
-            
+
             // Set portrait image
             if (portraitImage != null)
             {
                 portraitImage.sprite = dialogue.portrait;
-                portraitImage.enabled = dialogue.portrait != null; // Hide if none assigned
+                portraitImage.enabled = dialogue.portrait != null;
             }
 
             sentences.Clear();
@@ -69,19 +75,18 @@ namespace JonathansDemo
         {
             if (sentences.Count == 0)
             {
-                EndDialogue();
+                StartCoroutine(EndDialogueWithDelay()); // Trigger delayed ending
                 return;
             }
 
             string sentence = sentences.Dequeue();
-            StopAllCoroutines();
+            StopAllCoroutines(); // Stop any ongoing typing coroutine
             StartCoroutine(TypeSentence(sentence));
         }
 
         IEnumerator TypeSentence(string sentence)
         {
             dialogueText.text = "";
-            yield return new WaitForSeconds(0.1f);
             foreach (char letter in sentence.ToCharArray())
             {
                 dialogueText.text += letter;
@@ -89,11 +94,19 @@ namespace JonathansDemo
             }
         }
 
+        IEnumerator EndDialogueWithDelay()
+        {
+            Debug.Log("End of Conversation. Dialogue will stop after a delay.");
+            yield return new WaitForSeconds(endDialogueDelay); // Wait for the specified delay
+            EndDialogue();
+        }
+
         public void EndDialogue()
         {
-            Debug.Log("End of Convo");
+            Debug.Log("Dialogue has been stopped.");
             dialoguePopup.Hide();
-            DialogueIsPlaying = false;
+            DialogueIsPlaying = false; // Ensure flag is reset
+            justStartedDialogue = false; // Reset this state as well
         }
     }
 }
