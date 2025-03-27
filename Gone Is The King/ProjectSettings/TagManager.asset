@@ -6,6 +6,10 @@ TagManager:
   tags:
   - object
   - DialogueNPC
+  - ManaSprite
+  - HealthSprite
+  - experiencePoints
+  - coins
   - Shop
   - +
   - '-'
