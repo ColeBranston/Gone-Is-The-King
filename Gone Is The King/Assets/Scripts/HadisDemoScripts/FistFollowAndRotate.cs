@@ -3,7 +3,7 @@ using UnityEngine;
 public class FistFollowAndRotate : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Transform playerTransform; // Assign the player's transform
+    [SerializeField] private static Transform playerTransform; // Assign the player's transform
     [SerializeField] private Camera mainCamera;         // Assign the main camera (optional)
 
     private void Start()
@@ -15,6 +15,9 @@ public class FistFollowAndRotate : MonoBehaviour
 
     private void Update()
     {
+        // Exit if the player transform is not assigned
+        if (playerTransform == null) return;
+
         // Lock the fist's position to the player's x and y.
         // Optionally, preserve its z-position if needed (e.g., for sorting order)
         Vector3 newPosition = playerTransform.position;
@@ -35,5 +38,9 @@ public class FistFollowAndRotate : MonoBehaviour
 
         // Set the rotation so the fist points toward the mouse.
         transform.rotation = Quaternion.Euler(0f, 0f, angle - 90);
+    }
+
+    public static void setPlayer(GameObject player){
+        playerTransform = player.transform;
     }
 }
