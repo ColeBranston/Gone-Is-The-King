@@ -10,6 +10,13 @@ TagManager:
   - HealthSprite
   - experiencePoints
   - coins
+  - Shop
+  - +
+  - '-'
+  - buy
+  - countText
+  - Increase
+  - Decrease
   layers:
   - Default
   - TransparentFX
