@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maleCharacterPrefab: {fileID: 2158780299222234457, guid: ecd26f84b1c1d0442b34df2027aa0765, type: 3}
-  femaleCharacterPrefab: {fileID: 7751779451059186118, guid: 951b659d950fb884a865e080ef6f9fcd, type: 3}
+  femaleCharacterPrefab: {fileID: 8657694494395521562, guid: 951b659d950fb884a865e080ef6f9fcd, type: 3}
 --- !u!1 &225443142
 GameObject:
   m_ObjectHideFlags: 0
