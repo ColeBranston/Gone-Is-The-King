@@ -3117,39 +3117,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1443c1edc5258d4bbbfc2f38cebd78e, type: 3}
---- !u!1 &904642630 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5431063297171096337, guid: b842ae288f40d4847bb7d45bb0a1ff7f, type: 3}
-  m_PrefabInstance: {fileID: 1744422702}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &904642632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904642630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52f7c0ad670ca94b887e34d6daf134d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerTransform: {fileID: 1060946490}
-  mainCamera: {fileID: 0}
---- !u!114 &904642635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904642630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12cbfa176744a6848874b8e612c98b1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  punchOffset: 1
-  punchDuration: 0.2
 --- !u!1001 &923506163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5326,6 +5293,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5415092351745824954, guid: d5f136e0a1f30dc4aa54e646b1c6bb20, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12525392
+      objectReference: {fileID: 0}
+    - target: {fileID: 5415092351745824954, guid: d5f136e0a1f30dc4aa54e646b1c6bb20, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0427323
+      objectReference: {fileID: 0}
     - target: {fileID: 9166122505455124697, guid: d5f136e0a1f30dc4aa54e646b1c6bb20, type: 3}
       propertyPath: m_Name
       value: tree
@@ -5387,16 +5362,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7120938270563865841, guid: b842ae288f40d4847bb7d45bb0a1ff7f, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1060946490}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5431063297171096337, guid: b842ae288f40d4847bb7d45bb0a1ff7f, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 904642632}
-    - targetCorrespondingSourceObject: {fileID: 5431063297171096337, guid: b842ae288f40d4847bb7d45bb0a1ff7f, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 904642635}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b842ae288f40d4847bb7d45bb0a1ff7f, type: 3}
 --- !u!1001 &1755682134
 PrefabInstance:
