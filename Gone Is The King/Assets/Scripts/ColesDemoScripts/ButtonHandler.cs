@@ -25,15 +25,15 @@ public class ButtonHandler : MonoBehaviour
             return;
         }
 
-        switch (this.gameObject.tag)
+        switch (this.gameObject.name)
         {
-            case "Increase":
+            case "IncreaseCounter":
                 if (counterValue < maxValue) counterValue++;
                 break;
-            case "Decrease":
+            case "DecreaseCounter":
                 if (counterValue > minValue) counterValue--;
                 break;
-            case "Buy":
+            case "BuyCounter":
                 counterValue = 0;
                 break;
             default:
