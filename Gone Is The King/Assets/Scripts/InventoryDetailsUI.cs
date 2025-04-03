@@ -9,12 +9,17 @@ public class InventoryDetailsUI : MonoBehaviour
     [SerializeField] private TMP_Text itemNameText;       // The "Name: ..." field
     [SerializeField] private TMP_Text itemDescriptionText; // The "Description: ..." field
 
+    // Store the current item so we can use it later
+    private IItem currentItem;
+
     /// <summary>
     /// Updates the details panel with the given item's info.
     /// Disables the image GameObject when no item is selected.
     /// </summary>
     public void ShowDetails(IItem item)
     {
+        currentItem = item;
+
         if (item != null)
         {
             // Enable the image GameObject and update its sprite
@@ -37,6 +42,22 @@ public class InventoryDetailsUI : MonoBehaviour
                 itemNameText.text = "";
             if (itemDescriptionText != null)
                 itemDescriptionText.text = "";
+        }
+    }
+
+    /// <summary>
+    /// Called when the Use button is clicked.
+    /// Invokes the Use() method on the currently selected item.
+    /// </summary>
+    public void OnUseButtonClicked()
+    {
+        if (currentItem != null)
+        {
+            currentItem.Use();
+        }
+        else
+        {
+            Debug.LogWarning("No item is currently selected to use.");
         }
     }
 }

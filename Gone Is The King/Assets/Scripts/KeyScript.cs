@@ -41,6 +41,14 @@ public class KeyScripts : MonoBehaviour, IItem
         set { doorID = value; }
     }
 
+    // Implementation of the Use method from the IItem interface
+    public void Use()
+    {
+        // Define what happens when the weapon is used.
+        // For example, you might display a message, trigger an animation, or apply damage.
+        Debug.Log($"Key {Name} used!.");
+    }
+
     void Start()
     {
         // Optionally initialize here
