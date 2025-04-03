@@ -2,23 +2,47 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour, IItem
 {
-    // Public properties for all Weapons
-    public string Name { get; set; }
-    public string Description { get; set; }
-    public int Price { get; set; }
-    public Sprite Design { get; set; }
-    public double Damage { get; set; }
+    // Serialized backing fields for Inspector editing
+    [SerializeField] private string itemName;
+    [SerializeField] private string itemDescription;
+    [SerializeField] private int itemPrice;
+    [SerializeField] private Sprite itemDesign;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    // Additional property specific to Weapon
+    public double Damage;
+
+    // IItem interface implementation
+    public string Name
     {
-        
+        get { return itemName; }
+        set { itemName = value; }
     }
 
-    // Update is called once per frame
+    public string Description
+    {
+        get { return itemDescription; }
+        set { itemDescription = value; }
+    }
+
+    public int Price
+    {
+        get { return itemPrice; }
+        set { itemPrice = value; }
+    }
+
+    public Sprite Design
+    {
+        get { return itemDesign; }
+        set { itemDesign = value; }
+    }
+
+    void Start()
+    {
+        // Optionally initialize here
+    }
+
     void Update()
     {
-        
+        // Optional per-frame updates
     }
-    
 }
