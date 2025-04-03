@@ -334,11 +334,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5567781788636196990, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_Pivot.x
@@ -440,6 +440,14 @@ PrefabInstance:
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 8608007133648977008}
+    - target: {fileID: 7055331333743835691, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
