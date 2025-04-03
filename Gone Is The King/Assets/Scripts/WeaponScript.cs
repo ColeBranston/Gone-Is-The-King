@@ -36,6 +36,14 @@ public class Weapon : MonoBehaviour, IItem
         set { itemDesign = value; }
     }
 
+    // Implementation of the Use method from the IItem interface
+    public void Use()
+    {
+        // Define what happens when the weapon is used.
+        // For example, you might display a message, trigger an animation, or apply damage.
+        Debug.Log($"Weapon {Name} used! It deals {Damage} damage.");
+    }
+
     void Start()
     {
         // Optionally initialize here

@@ -9,6 +9,14 @@ public class ArmourScript : MonoBehaviour, IItem
     public Sprite Design { get; set; }
     public double Defence { get; set; }
     
+     // Implementation of the Use method from the IItem interface
+    public void Use()
+    {
+        // Define what happens when the weapon is used.
+        // For example, you might display a message, trigger an animation, or apply damage.
+        Debug.Log($"Key {Name} used!.");
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

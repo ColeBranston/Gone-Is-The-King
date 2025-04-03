@@ -6,4 +6,7 @@ public interface IItem
     string Description { get; set; }
     int Price { get; set; }
     Sprite Design { get; set; }
+
+    // Method to use the item
+    void Use();
 }
