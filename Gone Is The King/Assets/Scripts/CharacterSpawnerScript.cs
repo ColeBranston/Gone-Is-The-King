@@ -27,7 +27,7 @@ public class CharacterSpawnerScript : MonoBehaviour
             cameraFollow.SetPlayer(instantiatedCharacter);
             }
             else{
-            Debug.LogError("CameraFollow not found on the main camera.");
+            Debug.LogError("CameraFollow not found on the main camera.");   
             }
         }
     }
