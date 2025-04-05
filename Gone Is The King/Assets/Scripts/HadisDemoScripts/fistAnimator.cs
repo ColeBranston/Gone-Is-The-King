@@ -4,12 +4,15 @@ public class FistAnimatorController : MonoBehaviour
 {
     // Reference to the Animator component
     private Animator fistAnimator;
-    
+
     // Offset distance for the fist movement
     public float punchOffset = 1f;
 
     // Duration for the fist to stay in the offset position
     public float punchDuration = 0.2f;
+
+    // Damage dealt by the punch
+    public int punchDamage = 10;
 
     // Original position of the fist
     private Vector3 originalPosition;
@@ -45,7 +48,7 @@ public class FistAnimatorController : MonoBehaviour
     private void MoveFist()
     {
         // Move the fist in the forward direction
-        transform.localPosition += transform.forward * punchOffset;
+        transform.localPosition += transform.right * punchOffset;
 
         // Schedule returning the fist to its original position
         Invoke(nameof(ResetFistPosition), punchDuration);
@@ -55,5 +58,18 @@ public class FistAnimatorController : MonoBehaviour
     {
         // Reset the fist to its original position
         transform.localPosition = originalPosition;
+    }
+
+    // Called when another 2D collider enters this object's trigger collider
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("Here");
+        // Check if the colliding object implements IAttackable (for example, an enemy)
+        IAttackable attackable = other.GetComponent<IAttackable>();
+        if (attackable != null)
+        {
+            // Apply damage to the enemy
+            attackable.TakeDamage(punchDamage);
+        }
     }
 }
