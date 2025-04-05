@@ -34,11 +34,12 @@ public class Consumable : MonoBehaviour, IItem
     }
 
      // Implementation of the Use method from the IItem interface
-    public void Use()
+    public virtual void Use()
     {
         // Define what happens when the weapon is used.
         // For example, you might display a message, trigger an animation, or apply damage.
         Debug.Log($"Consumable {Name} used!.");
+
     }
 
 

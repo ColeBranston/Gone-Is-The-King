@@ -7,9 +7,11 @@ public class hasInventory : MonoBehaviour
     // Inventory dictionary: key = item's name, value = tuple (IItem, amount)
     private Dictionary<string, (IItem item, int amount)> inventory = new Dictionary<string, (IItem, int)>();
 
+    public static hasInventory Instance;
+
     // Event to notify when the inventory changes (item added or removed)
     public event Action OnInventoryChanged;
-
+    
     void Start()
     {
         // Optionally, initialize your inventory here.
@@ -19,6 +21,11 @@ public class hasInventory : MonoBehaviour
     {
         // Inventory updates can be handled here if needed.
     }
+
+    void Awake()
+	{
+		Instance = this;
+	}
 
     /// <summary>
     /// Adds the specified amount of the item to the inventory.
