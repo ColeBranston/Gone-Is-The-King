@@ -30,7 +30,7 @@ public class MenuScript : MonoBehaviour
     
     private void LoadGameScene(){
         DontDestroyOnLoad(selectedCharacter);
-        SceneManager.LoadScene("MainTestScene");
+        SceneManager.LoadScene(2);
     }
 
     public static GameObject GetSelectedCharacter(){
