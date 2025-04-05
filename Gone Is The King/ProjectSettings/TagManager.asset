@@ -17,11 +17,13 @@ TagManager:
   - countText
   - Increase
   - Decrease
+  - Protagonist
+  - Enemy
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Collidables
   - Water
   - UI
   - NPC
