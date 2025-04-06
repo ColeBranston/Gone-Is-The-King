@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement; // Add this for scene loading
+using UnityEngine.SceneManagement; // Needed for scene loading
 using JonathansDemo;
 
 public class RoyalAdvisorDecisionHandler : MonoBehaviour
@@ -9,10 +9,9 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     public GameObject choicePanel;
     public Button spareButton;
     public Button fightButton;
-    public GameManager gameManger;
 
     [Header("Transforms")]
-    public GameObject enemyVersion;   // Enemy prefab to fight
+    public GameObject enemyVersion;   
 
     private bool playerInRange = false;
     private bool hasDecided = false;
@@ -21,20 +20,17 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     {
         choicePanel.SetActive(false);
         spareButton.onClick.AddListener(Spare);
-        if (gameManager.bossesFought == 0)
-        {
-            fightButton.onClick.AddListener(Fight);
-        }
+        fightButton.onClick.AddListener(Fight);
     }
 
-    void Update()
+    private void Update()
     {
         if (playerInRange && !hasDecided && Input.GetKeyDown(KeyCode.E))
         {
             if (choicePanel != null)
             {
                 choicePanel.SetActive(true);
-                Debug.Log("📋 Boss choice panel opened.");
+                Debug.Log("📋 Royal Advisor choice panel opened.");
             }
         }
     }
@@ -43,7 +39,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("✅ Player entered the boss trigger zone!");
+            Debug.Log("✅ Player entered the Royal Advisor trigger zone!");
             playerInRange = true;
         }
     }
@@ -52,7 +48,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("🚪 Player left the boss trigger zone.");
+            Debug.Log("🚪 Player left the Royal Advisor trigger zone.");
             playerInRange = false;
         }
     }
@@ -63,8 +59,8 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
         choicePanel.SetActive(false);
         hasDecided = true;
 
-        // Load ending scene instead of instantiating an NPC
-        SceneManager.LoadScene("ConvictSuspectEnding");
+        // Go to the ending scene for sparing the Royal Advisor
+        SceneManager.LoadScene("ConvictSuspectsEnding");
     }
 
     private void Fight()

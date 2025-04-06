@@ -1,38 +1,36 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Needed for scene loading
 using JonathansDemo;
 
 public class RoyalAdvisorDecisionHandler : MonoBehaviour
 {
     [Header("Choice UI")]
     public GameObject choicePanel;
-    public Button convictSuspect;
-    public Button convictAdvisor;
-    GameManager gameManager;
+    public Button spareButton;
+    public Button fightButton;
 
     [Header("Transforms")]
     public GameObject enemyVersion;   
+
     private bool playerInRange = false;
     private bool hasDecided = false;
 
     private void Start()
     {
         choicePanel.SetActive(false);
-        convictSuspect.onClick.AddListener(ConvictSuspects);
-        if(gameManager.bossesFought == 0){
-            convictAdvisor.onClick.AddListener(ConvictAdvisor);
-        }
-        
+        spareButton.onClick.AddListener(Spare);
+        fightButton.onClick.AddListener(Fight);
     }
 
-     void Update()
+    private void Update()
     {
         if (playerInRange && !hasDecided && Input.GetKeyDown(KeyCode.E))
         {
             if (choicePanel != null)
             {
                 choicePanel.SetActive(true);
-                Debug.Log("📋 Boss choice panel opened.");
+                Debug.Log("📋 Royal Advisor choice panel opened.");
             }
         }
     }
@@ -41,7 +39,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("✅ Player entered the boss trigger zone!");
+            Debug.Log("✅ Player entered the Royal Advisor trigger zone!");
             playerInRange = true;
         }
     }
@@ -50,27 +48,32 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("🚪 Player left the boss trigger zone.");
+            Debug.Log("🚪 Player left the Royal Advisor trigger zone.");
             playerInRange = false;
         }
     }
 
-    private void ConvictSuspects()
-{
-    
-}
-
-private void ConvictAdvisor()
-{
-    GameManager.Instance.RecordFight();
-    choicePanel.SetActive(false);
-    hasDecided = true;
-
-    if (enemyVersion != null)
+    private void Spare()
     {
-        Instantiate(enemyVersion, transform.position, transform.rotation);
+        GameManager.Instance.RecordSpare();
+        choicePanel.SetActive(false);
+        hasDecided = true;
+
+        // Go to the ending scene for sparing the Royal Advisor
+        SceneManager.LoadScene("ConvictSuspectsEnding");
     }
 
-    Destroy(gameObject); // remove neutral boss
-}
+    private void Fight()
+    {
+        GameManager.Instance.RecordFight();
+        choicePanel.SetActive(false);
+        hasDecided = true;
+
+        if (enemyVersion != null)
+        {
+            Instantiate(enemyVersion, transform.position, transform.rotation);
+        }
+
+        Destroy(gameObject); // remove neutral boss
+    }
 }
