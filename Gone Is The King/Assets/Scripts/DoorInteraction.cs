@@ -72,6 +72,8 @@ public class DoorInteraction : MonoBehaviour
         if (currentConsecutiveSuccesses == requiredConsecutiveSuccesses)
         {
             Debug.Log("✅ QTE Passed. Loading next scene...");
+            GameManager.Instance.CompletedBoss(false);
+            GameManager.Instance.FoundKey(false);
             SceneManager.LoadScene(sceneToLoad);
         }
         else

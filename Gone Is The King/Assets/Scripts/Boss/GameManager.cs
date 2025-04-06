@@ -1,3 +1,4 @@
+using System.Net.NetworkInformation;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class GameManager : MonoBehaviour
     // Example variables you might track
     public int bossesSpared = 0;
     public int bossesFought = 0;
+
+    // Public for testing
+    public bool bossComplete = false;
+    public bool keyFound = false;
 
     private void Awake()
     {
@@ -37,4 +42,10 @@ public class GameManager : MonoBehaviour
         bossesFought++;
         Debug.Log("Boss fought. Total fought: " + bossesFought);
     }
+    public void CompletedBoss(bool value){
+        bossComplete = value;
+    }
+    public void FoundKey(bool value){
+        keyFound = value;
+    }    
 }
