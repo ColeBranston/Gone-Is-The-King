@@ -8,14 +8,14 @@ public class FistAnimatorController : MonoBehaviour
     // Offset distance for the fist movement
     public float punchOffset = 1f;
 
-    // Duration for the fist to stay in the offset position
-    public float punchDuration = 0.2f;
-
     // Damage dealt by the punch
     public int punchDamage = 10;
 
     // Original position of the fist
     private Vector3 originalPosition;
+
+    // Flag to track if the punch is active
+    private bool isPunching = false;
 
     void Start()
     {
@@ -25,7 +25,6 @@ public class FistAnimatorController : MonoBehaviour
         // Store the original position of the fist
         originalPosition = transform.localPosition;
 
-        // Check if the Animator component is found
         if (fistAnimator == null)
         {
             Debug.LogError("Animator component not found on the GameObject.");
@@ -34,41 +33,40 @@ public class FistAnimatorController : MonoBehaviour
 
     void Update()
     {
-        // Check for mouse down (left-click)
+        // Start punch on left mouse click
         if (Input.GetMouseButtonDown(0))
         {
-            // Trigger the animation using the "Punch" trigger parameter
             fistAnimator.SetTrigger("Punch");
-
-            // Move the fist forward
-            MoveFist();
+            StartPunch();
         }
     }
 
-    private void MoveFist()
+    // Called at the start of the punch animation
+    private void StartPunch()
     {
-        // Move the fist in the forward direction
+        isPunching = true;
+        // Optionally move the fist forward instantly (or handle via the animation)
         transform.localPosition += transform.right * punchOffset;
-
-        // Schedule returning the fist to its original position
-        Invoke(nameof(ResetFistPosition), punchDuration);
     }
 
-    private void ResetFistPosition()
+    // This method is meant to be called by an animation event at the end of the punch animation
+    public void EndPunch()
     {
-        // Reset the fist to its original position
+        isPunching = false;
+        // Reset the fist to its original position once the animation finishes
         transform.localPosition = originalPosition;
     }
 
     // Called when another 2D collider enters this object's trigger collider
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Here");
-        // Check if the colliding object implements IAttackable (for example, an enemy)
+        // Only apply damage if the punch is active
+        if (!isPunching)
+            return;
+
         IAttackable attackable = other.GetComponent<IAttackable>();
         if (attackable != null)
         {
-            // Apply damage to the enemy
             attackable.TakeDamage(punchDamage);
         }
     }

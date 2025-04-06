@@ -90,8 +90,10 @@ public class HealthSystem : MonoBehaviour
 			hitPoint = 0;
 
 		UpdateGraphics();
-
-		// StartCoroutine(PlayerHurts());
+		if (hitPoint <= 0)
+        {
+            Die();
+        }
 	}
 
 	public void HealDamage(float Heal)
@@ -145,6 +147,12 @@ public class HealthSystem : MonoBehaviour
 		maxExperiencePoint += (int)(maxExperiencePoint * max / 100);
 		
 		UpdateGraphics();
+	}
+	private void Die()
+    {
+        Debug.Log("Player is dead! Ending game...");
+        SceneManager.LoadScene("GameOver");
+		Destroy(gameObject);
 	}
 
 	//==============================================================

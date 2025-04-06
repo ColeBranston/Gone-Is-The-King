@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8618061396841408657}
   - component: {fileID: 7948404781771684656}
-  - component: {fileID: 7539168367970387239}
+  - component: {fileID: 3668982488149757611}
   - component: {fileID: 5479337813329127244}
   m_Layer: 0
   m_Name: bread
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7539168367970387239
+--- !u!114 &3668982488149757611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,13 +98,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 517725063685621382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a7ca7dfbc484411e8b1c6a7d24e17c6, type: 3}
+  m_Script: {fileID: 11500000, guid: d232214d5789d7d49a10c51049f95133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Bread
   itemDescription: Tasts good, but don't know where it's been
   itemPrice: 5
   itemDesign: {fileID: 21300000, guid: 71a74455f35c2574c8072f6a0b2f2047, type: 3}
+  healAmount: 10
 --- !u!61 &5479337813329127244
 BoxCollider2D:
   m_ObjectHideFlags: 0
