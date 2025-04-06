@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CharacterSelection.unity
     guid: 24b22b1137a61ff48b39958b89ddd2b4
   - enabled: 1
+    path: Assets/Scenes/InsideCastle.unity
+    guid: bde67460e9a941a4785b24e721c01843
+  - enabled: 1
     path: Assets/Scenes/MainTestScene.unity
     guid: 5dd8146d538b4dd4881164699a178e83
   - enabled: 0

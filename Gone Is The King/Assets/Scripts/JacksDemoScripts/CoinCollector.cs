@@ -9,7 +9,7 @@ public class CoinCollector : MonoBehaviour
         if (collision.gameObject.CompareTag("coins"))
         {
             // Example XP amount (you can customize this as needed)
-            float money = 5f;
+            float money = 1f;
 
             if (CoinSystem.Instance != null)
             {
