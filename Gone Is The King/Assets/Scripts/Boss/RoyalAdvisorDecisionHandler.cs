@@ -60,7 +60,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
         hasDecided = true;
 
         // Go to the ending scene for sparing the Royal Advisor
-        SceneManager.LoadScene("ConvictSuspectsEnding");
+        SceneManager.LoadScene("ConvictSuspectEnding");
     }
 
     private void Fight()
