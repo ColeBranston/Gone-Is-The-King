@@ -120,15 +120,25 @@ public class ButtonHandler : MonoBehaviour
 
     public void UpdateCounterText()
     {
-        if (counterText != null)
+        if (currentGold == null || counterText == null || priceText == null)
         {
-            currentGold.SetText($"Coins: {CoinSystem.Instance.coins}");
-            counterText.SetText(counterValue.ToString());
-            IItem itemComponent = selectedItemPrefab != null ? selectedItemPrefab.GetComponent<IItem>() : null;
-            if (itemComponent != null)
-            {
-                priceText.SetText($"Price: {itemComponent.Price * counterValue} Coins");
-            }
+            Debug.LogWarning("UI references not set in ButtonHandler.");
+            return;
+        }
+    
+        if (CoinSystem.Instance == null)
+        {
+            Debug.LogWarning("CoinSystem.Instance is null.");
+            return;
+        }
+    
+        currentGold.SetText($"Coins: {CoinSystem.Instance.coins}");
+        counterText.SetText(counterValue.ToString());
+
+        IItem itemComponent = selectedItemPrefab != null ? selectedItemPrefab.GetComponent<IItem>() : null;
+        if (itemComponent != null)
+        {
+            priceText.SetText($"Price: {itemComponent.Price * counterValue} Coins");
         }
     }
 }
