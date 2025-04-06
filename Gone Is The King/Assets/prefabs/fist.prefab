@@ -103,7 +103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52f7c0ad670ca94b887e34d6daf134d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
   mainCamera: {fileID: 0}
 --- !u!114 &2490421852776465041
 MonoBehaviour:
@@ -112,7 +111,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5431063297171096337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bf3adb2939de034c8209849c65ad877, type: 3}
   m_Name: 
@@ -130,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   punchOffset: 1
-  punchDuration: 0.2
+  punchDamage: 10
 --- !u!95 &4587688368853942524
 Animator:
   serializedVersion: 7
