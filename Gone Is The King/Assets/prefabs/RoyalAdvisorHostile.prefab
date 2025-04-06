@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3290466448675300005}
   - component: {fileID: 1482420222308125582}
   m_Layer: 0
-  m_Name: EnemyBoss 1
+  m_Name: RoyalAdvisorHostile
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
