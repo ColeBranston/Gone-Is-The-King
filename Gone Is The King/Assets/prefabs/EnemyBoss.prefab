@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1482420222308125582}
   m_Layer: 0
   m_Name: EnemyBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,10 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d488e96678b6a94abd356c897462e52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _health: 100
+  _defense: 10
   moveSpeed: 1
   attackRange: 1
   detectionRange: 5
-  health: 100
   damage: 10
 --- !u!61 &1482420222308125582
 BoxCollider2D:
