@@ -109,6 +109,7 @@ public class EnemyBoss : MonoBehaviour, IAttackable
         else
         {
             Destroy(gameObject); // Regular enemies just get destroyed
+            GameManager.Instance.CompletedBoss(true);
         }
     }
 }
