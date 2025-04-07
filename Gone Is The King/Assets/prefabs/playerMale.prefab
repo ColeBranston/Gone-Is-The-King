@@ -201,7 +201,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2158780299222234457}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1bf3adb2939de034c8209849c65ad877, type: 3}
   m_Name: 
@@ -335,11 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5567781788636196990, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_Pivot.x
@@ -443,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 8608007133648977008}
     - target: {fileID: 7055331333743835691, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_SizeDelta.y
