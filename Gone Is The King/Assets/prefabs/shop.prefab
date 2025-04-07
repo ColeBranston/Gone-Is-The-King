@@ -78,8 +78,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2036443905
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2393986808091445904, guid: 4719a7ca9f0774a4db9dbc7e83173226, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,9 +139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopMenu: {fileID: 8350172507570451729, guid: f8451e5255c52db45a385d4ddef1bdab, type: 3}
-  playerCoins: 100
-  playerInventory: {fileID: 0}
-  quantityText: {fileID: 0}
 --- !u!61 &3988269377617914408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,7 +173,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.036578655, y: -0.6785019}
+  m_Offset: {x: -0.03657818, y: -0.6785023}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -186,7 +183,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.4232135, y: 1.5098437}
+  m_Size: {x: 13.651226, y: 16.721327}
   m_EdgeRadius: 0
 --- !u!61 &-4114642182030685617
 BoxCollider2D:
@@ -222,7 +219,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.6644154}
+  m_Offset: {x: -0.00000047683716, y: -0.66441536}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -232,5 +229,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.22, y: 1.2880012}
+  m_Size: {x: 13.448012, y: 16.499483}
   m_EdgeRadius: 0

@@ -85,9 +85,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: -2036443905
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5905681027756182028, guid: 9701d1740678cf542ab023a1a62f6dc0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -335,11 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3298033164260556599, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5567781788636196990, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_Pivot.x
@@ -443,7 +443,7 @@ PrefabInstance:
       objectReference: {fileID: 8608007133648977008}
     - target: {fileID: 7055331333743835691, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_SizeDelta.y

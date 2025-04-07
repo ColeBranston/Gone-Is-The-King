@@ -1325,7 +1325,6 @@ GameObject:
   - component: {fileID: 7872760962611160731}
   - component: {fileID: 3633688244175879971}
   - component: {fileID: 6552456706978795920}
-  - component: {fileID: 8512655862707298366}
   m_Layer: 5
   m_Name: Submit
   m_TagString: buy
@@ -1447,28 +1446,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8512655862707298366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3533447826309849022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac1bf1aa930a7049926ee1349f10ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counterText: {fileID: 7638433441530119542}
-  priceText: {fileID: 0}
-  notifyText: {fileID: 0}
-  currentGold: {fileID: 0}
-  swordPrefab: {fileID: 0}
-  crossbowPrefab: {fileID: 0}
-  herbPrefab: {fileID: 0}
-  healthPotionPrefab: {fileID: 0}
-  breadPrefab: {fileID: 0}
-  excaliburPrefab: {fileID: 0}
 --- !u!1 &3842206315765526057
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,7 +2230,6 @@ GameObject:
   - component: {fileID: 6226489344681865009}
   - component: {fileID: 1077615602937121364}
   - component: {fileID: 6988798327960647108}
-  - component: {fileID: 982195928315348807}
   m_Layer: 5
   m_Name: herb
   m_TagString: Untagged
@@ -2375,28 +2351,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &982195928315348807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5211954524628288414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac1bf1aa930a7049926ee1349f10ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  counterText: {fileID: 7638433441530119542}
-  priceText: {fileID: 0}
-  notifyText: {fileID: 0}
-  currentGold: {fileID: 0}
-  swordPrefab: {fileID: 3342676607257914320, guid: e46892ff8ef7cdc53ac9add89ec579e2, type: 3}
-  crossbowPrefab: {fileID: 6916277518885220316, guid: 536d58fcc72940253852fc90582434b2, type: 3}
-  herbPrefab: {fileID: 54035739458752491, guid: 0d58376cf3d9770ad9d40536200683f5, type: 3}
-  healthPotionPrefab: {fileID: 1127424626586648204, guid: 7ffdca6691464eb6ebfe749c478de510, type: 3}
-  breadPrefab: {fileID: 517725063685621382, guid: 00e5cad51175fe16f8e04242f37ff91c, type: 3}
-  excaliburPrefab: {fileID: 7455612945049074433, guid: 3c442d7033d0b8b41809d3e2460eec6e, type: 3}
 --- !u!1 &5352743549187127064
 GameObject:
   m_ObjectHideFlags: 0
@@ -3934,7 +3888,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!114 &2587120728300233494
 MonoBehaviour:
