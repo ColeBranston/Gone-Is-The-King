@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6812754439393198453
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -314.84485
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.486902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1219183620563994465, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000902772616290451, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3467472655778454953, guid: bdb92875350034ef588f8e4aeacad959, type: 3}
+    - target: {fileID: 7000902772616290451, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638698952480767289, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_Name
+      value: PortBossNPC Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: dialogue.name
+      value: Pirate Captain
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: dialogue.portrait
+      value: 
+      objectReference: {fileID: 3467472655778454953, guid: bdb92875350034ef588f8e4aeacad959, type: 3}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: 'dialogue.sentence.Array.data[0]'
+      value: Thank you for having faith in me. I may not be the most not have the
+        best reputation but I don't never mean harm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: 'dialogue.sentence.Array.data[1]'
+      value: I heard the Head Miner may have had something to do with it, but he
+        may just be in a similar situation as me.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: 'dialogue.sentence.Array.data[2]'
+      value: I hope you will find out who did that to your father.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
