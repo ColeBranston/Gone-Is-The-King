@@ -63,7 +63,7 @@ public class BossDecisionHandler : MonoBehaviour
     {
         Instantiate(npcVersion, transform.position, transform.rotation);
     }
-
+    GameManager.Instance.CompletedBoss(true);
     Destroy(gameObject); // remove neutral boss
 }
 

@@ -2,22 +2,25 @@ using UnityEngine;
 
 public class QTESpinner : MonoBehaviour
 {
-    [Header("References")] public RectTransform spinnerNeedle;
+    [Header("References")]
+    public RectTransform spinnerNeedle;
 
-    [Header("Settings")] public float rotationSpeed = 180f; // Degrees per second
-    public float targetAngle = 152; // 152          // Angle where E must be pressed
-    public float successThreshold = 32; // 32     // Allowed margin (degrees)
+    [Header("Settings")]
+    public float rotationSpeed = 180f; // Degrees per second
+    public float targetAngle = 152;
+    public float successThreshold = 32;
 
     private bool qteActive = true;
+
+    // Events
+    public event System.Action OnQTESuccess;
+    public event System.Action OnQTEFail;
 
     void Update()
     {
         if (!qteActive) return;
 
-        // Rotate the spinner clockwise
         spinnerNeedle.Rotate(0f, 0f, -rotationSpeed * Time.deltaTime);
-        // Debug.Log("Angle: " + spinnerNeedle.eulerAngles.z); // to check the angles for Debuging
-
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -27,14 +30,21 @@ public class QTESpinner : MonoBehaviour
             if (angleDiff <= successThreshold)
             {
                 Debug.Log("✅ Success!");
-                // Add your success logic here
+                OnQTESuccess?.Invoke();
             }
             else
             {
                 Debug.Log("❌ Fail!");
-                // Add your fail logic here
+                OnQTEFail?.Invoke();
             }
-            qteActive = false; // Only allow one press; remove this if it's multi-try
+
+            qteActive = false;
         }
+    }
+
+    public void ResetQTE()
+    {
+        qteActive = true;
+        spinnerNeedle.localEulerAngles = Vector3.zero;
     }
 }
