@@ -20,7 +20,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     private void Start()
     {
         choicePanel.SetActive(false);
-        if(gameManager.bossesFought == 0){
+        if(GameManager.Instance.bossesFought == 0){
             spareButton.onClick.AddListener(Spare);
         }
         fightButton.onClick.AddListener(Fight);
