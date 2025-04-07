@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyBoss : MonoBehaviour, IAttackable
 {
@@ -98,6 +99,16 @@ public class EnemyBoss : MonoBehaviour, IAttackable
     private void Die()
     {
         Debug.Log("Boss has been defeated!");
-        Destroy(gameObject); // Destroy the boss object when it dies
+        Debug.Log(gameObject.name);
+
+        // Check for Royal Advisor special ending
+        if (gameObject.name == "RoyalAdvisorHostile(Clone)")
+        {
+            SceneManager.LoadScene("KillRoyalAdvisorEnding");
+        }
+        else
+        {
+            Destroy(gameObject); // Regular enemies just get destroyed
+        }
     }
 }

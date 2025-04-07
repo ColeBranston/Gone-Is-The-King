@@ -12,6 +12,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
 
     [Header("Transforms")]
     public GameObject enemyVersion;   
+    public GameManager gameManager;
 
     private bool playerInRange = false;
     private bool hasDecided = false;
@@ -19,7 +20,9 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
     private void Start()
     {
         choicePanel.SetActive(false);
-        spareButton.onClick.AddListener(Spare);
+        if(gameManager.bossesFought == 0){
+            spareButton.onClick.AddListener(Spare);
+        }
         fightButton.onClick.AddListener(Fight);
     }
 
@@ -60,7 +63,7 @@ public class RoyalAdvisorDecisionHandler : MonoBehaviour
         hasDecided = true;
 
         // Go to the ending scene for sparing the Royal Advisor
-        SceneManager.LoadScene("ConvictSuspectsEnding");
+        SceneManager.LoadScene("ConvictSuspectEnding");
     }
 
     private void Fight()

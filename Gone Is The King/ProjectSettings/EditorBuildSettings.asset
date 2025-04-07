@@ -26,6 +26,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/testScene.unity
     guid: 9eea99b59a28c8448ae79776a0284e0a
+  - enabled: 1
+    path: Assets/Scenes/ConvictSuspectEnding.unity
+    guid: 29468bf1158d415469c4babf8cd79b55
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 8ce08b7733a58ea49ad8174f04720d0b
+  - enabled: 1
+    path: Assets/Scenes/KillRoyalAdvisorEnding.unity
+    guid: 0163e07b813600d40bf276359eec29a7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -147,9 +147,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 2.999939
       objectReference: {fileID: 0}
+    - target: {fileID: 2843089467077146691, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 2902780540623534833, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 2.999939
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902780540623534833, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 3887252457305486674, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -161,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860190065931314792, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -9.999985
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4978460609759748146, guid: 81d8c55eb08a058449d71126b91e90b0, type: 3}
       propertyPath: m_Pivot.x
@@ -447,6 +455,7 @@ GameObject:
   - component: {fileID: 606018849}
   - component: {fileID: 606018848}
   - component: {fileID: 606018847}
+  - component: {fileID: 606018852}
   - component: {fileID: 606018851}
   - component: {fileID: 606018850}
   m_Layer: 0
@@ -490,8 +499,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.030732393}
-  m_Radius: 2.530564
+  m_Offset: {x: 0, y: 0.030732155}
+  m_Radius: 4.831066
 --- !u!212 &606018848
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -556,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 606018846}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 4.526, z: -1.0155541}
+  m_LocalPosition: {x: -0.02, y: 6.32, z: -1.0155541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -614,6 +623,27 @@ MonoBehaviour:
   spareButton: {fileID: 1454903106}
   fightButton: {fileID: 1454903105}
   enemyVersion: {fileID: 3757434460442202553, guid: b99ef7aa47f839447bc757e57b620ee1, type: 3}
+  gameManager: {fileID: 1752448411}
+--- !u!114 &606018852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606018846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18bc6280578f6467db2c7522371035b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Royal Advisor
+    portrait: {fileID: 9079905429464953686, guid: c49bffa2836bf4014b101df93654ecd4, type: 3}
+    sentence:
+    - Welcome back young prince!
+    - Now that you have made a thorough investigation, who are you going to convict?
+    - You are the prince! The kingdom will listen to what you say.
+    - Well, whats your decision then?
 --- !u!1001 &1036027907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,9 +2026,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3773299599869008785, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466359396096973663, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4466359396096973663, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4882556230845498138, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
       propertyPath: m_Name
       value: BossChoice
+      objectReference: {fileID: 0}
+    - target: {fileID: 5932825319636955675, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001478065826609415, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_text
+      value: Convict Advisor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001478065826609415, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_margin.w
+      value: 2.784607
+      objectReference: {fileID: 0}
+    - target: {fileID: 7001478065826609415, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_margin.x
+      value: -15.263832
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836541313918164586, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_text
+      value: 'Convict Suspects
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7836541313918164586, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_margin.z
+      value: -39.52423
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348946864863914247, guid: 3043b28ede0cce14cbb86e747bc1d43e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2217,6 +2289,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bossesSpared: 0
   bossesFought: 0
+  bossComplete: 0
+  keyFound: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
