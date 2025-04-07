@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour
     public float dashSpeed = 10f;
     public float dashDuration = 0.4f;
     public float dashCooldown = 1f;
-    public bool canDash = true;
+    public bool canDash = false;
 
     private bool isDashing = false;
     private float dashTimeLeft;
@@ -17,6 +17,21 @@ public class playerMovement : MonoBehaviour
     private Rigidbody2D rb; 
     private Vector2 movement; 
 
+    public static playerMovement Instance;
+
+    private void Awake()
+    {
+        // Singleton pattern
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Persist through scenes
+        }
+        else
+        {
+            Destroy(gameObject); // Prevent duplicates
+        }
+    }
     void Start()
     {
         // Get the Rigidbody2D attached to the character
@@ -72,5 +87,8 @@ public class playerMovement : MonoBehaviour
 
             // You can add additional behavior here as needed
         }
+    }
+    public void UnlockDash(){
+        canDash = true;
     }
 }
