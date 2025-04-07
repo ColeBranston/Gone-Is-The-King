@@ -1,11 +1,31 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyBoss : MonoBehaviour
+public class EnemyBoss : MonoBehaviour, IAttackable
 {
+    // Use private backing fields for health and defense.
+    [SerializeField]
+    private double _health = 100; // You can set an initial value here or via the inspector
+
+    [SerializeField]
+    private double _defense = 10; // Likewise, set an initial value
+
+    // Public properties to access health and defense
+    public double Health
+    {
+        get { return _health; }
+        set { _health = value; }
+    }
+
+    public double Defense
+    {
+        get { return _defense; }
+        set { _defense = value; }
+    }
+
     public float moveSpeed = 3f;           // Movement speed of the enemy boss
     public float attackRange = 1f;         // Range at which the boss will attack
     public float detectionRange = 5f;      // Range at which the boss will detect the player
-    public float health = 100f;            // Health of the boss
     public float damage = 10f;             // Damage dealt by the boss
     private float attackCooldown = 1f;     // Time between attacks
     private float attackCooldownTimer = 0f;
@@ -32,7 +52,8 @@ public class EnemyBoss : MonoBehaviour
             attackCooldownTimer -= Time.deltaTime;
         }
 
-        if (health <= 0f)
+        // Check for death
+        if (Health <= 0f)
         {
             Die();
         }
@@ -45,7 +66,7 @@ public class EnemyBoss : MonoBehaviour
         transform.position += direction * moveSpeed * Time.deltaTime;
     }
 
-    // This function will be called when the player's collider enters the boss's attack range
+    // This function is called when the player's collider stays within the boss's trigger collider
     private void OnTriggerStay2D(Collider2D other)
     {
         // When the boss collider detects the player, store the player's transform dynamically
@@ -66,18 +87,29 @@ public class EnemyBoss : MonoBehaviour
     }
 
     // Take damage from the player or other sources
-    public void TakeDamage(float damage)
+    public void TakeDamage(double damage)
     {
-        health -= damage;
-        if (health < 0) health = 0;
+        Health -= damage;
+        if (Health < 0) Health = 0;
 
-        Debug.Log("Boss Health: " + health);
+        Debug.Log("Boss Health: " + Health);
     }
 
     // Handle the boss death
     private void Die()
     {
         Debug.Log("Boss has been defeated!");
-        Destroy(gameObject); // Destroy the boss object when it dies
+        Debug.Log(gameObject.name);
+
+        // Check for Royal Advisor special ending
+        if (gameObject.name == "RoyalAdvisorHostile(Clone)")
+        {
+            SceneManager.LoadScene("KillRoyalAdvisorEnding");
+        }
+        else
+        {
+            Destroy(gameObject); // Regular enemies just get destroyed
+            GameManager.Instance.CompletedBoss(true);
+        }
     }
 }
