@@ -61,6 +61,10 @@ PrefabInstance:
       value: BodySprites_0 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: dialogue.portrait
+      value: 
+      objectReference: {fileID: 2887842312010984629, guid: bdb92875350034ef588f8e4aeacad959, type: 3}
+    - target: {fileID: 9169298275858546362, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
       propertyPath: 'dialogue.sentence.Array.data[0]'
       value: "Hah\u2026 so that\u2019s your choice. A mercy I wouldn\u2019t have
         given you"
