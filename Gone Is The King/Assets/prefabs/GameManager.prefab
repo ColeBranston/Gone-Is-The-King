@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9070717212978558912}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6bdb91dab7902241a038b93c298b6de, type: 3}
+  m_Script: {fileID: 11500000, guid: 999a19e1885c94863aa3548aef757afd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bossesSpared: 0
