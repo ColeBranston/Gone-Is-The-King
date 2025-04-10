@@ -7,5 +7,5 @@
 	ignorecase = true
 	worktree = .
 [remote "origin"]
-	url = https://github.com/AlexandraLHeureuxECE/final-project-gone-is-the-king.git
+	url = https://github.com/ColeBranston/Gone-Is-The-King.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
