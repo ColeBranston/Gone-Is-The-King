@@ -90,8 +90,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 2
+  m_SortingLayerID: 748952057
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 725388354212799560, guid: f96cea18fb7d22b4eb9810b51022d681, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  dashSpeed: 10
+  dashDuration: 0.4
+  dashCooldown: 1
+  canDash: 1
 --- !u!95 &3123186663893166513
 Animator:
   serializedVersion: 7
@@ -819,6 +823,10 @@ PrefabInstance:
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 5608868385602132858}
+    - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7500862410578567332, guid: db3301fafc2f09f41b00e4537c6468c8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.000019303703

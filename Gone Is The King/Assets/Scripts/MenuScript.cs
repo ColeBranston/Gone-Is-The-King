@@ -8,6 +8,13 @@ public class MenuScript : MonoBehaviour
 
     private static GameObject selectedCharacter;
 
+    void Start()
+    {
+        // Force windowed mode with desired resolution
+        // Screen.fullScreen = false;
+        // Screen.SetResolution(854, 480, false);
+    }
+
     public void PlayGame(){
         SceneManager.LoadSceneAsync(1);
     }

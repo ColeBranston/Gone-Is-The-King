@@ -61,12 +61,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -3399813587714895559, guid: e09e31e1b5b6e421dbf46a4982025830, type: 3}
     - target: {fileID: 7000902772616290451, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7000902772616290451, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7000902772616290451, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2036443905
+      objectReference: {fileID: 0}
     - target: {fileID: 7638698952480767289, guid: f49c5ea73bb2447939b4fa94c84b96b0, type: 3}
       propertyPath: m_Name
-      value: BodySprites_0 Variant
+      value: PassiveBossMines
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

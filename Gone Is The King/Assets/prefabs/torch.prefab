@@ -10,11 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: c9987513481982b4da5422edf0acd5c0, type: 3}
       propertyPath: m_Name
-      value: Torch (2)
+      value: torch
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: c9987513481982b4da5422edf0acd5c0, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: c9987513481982b4da5422edf0acd5c0, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: c9987513481982b4da5422edf0acd5c0, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 748952057
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: c9987513481982b4da5422edf0acd5c0, type: 3}
       propertyPath: m_LocalPosition.x
