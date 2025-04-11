@@ -2,6 +2,14 @@
 
 This is a medieval murder mystery style unity game that uses original assets and music made by us.
 
+# Controls
+
+W,A,S,D - Movement
+Shift - Dash
+I - Inventory
+E - Interact (Chests, NPCs, Shop)
+Mouse/Click - Aim/Attack
+
 # Documentation
 
 #### Class Diagram
