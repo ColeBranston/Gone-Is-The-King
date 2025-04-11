@@ -2,13 +2,21 @@
 
 This is a medieval murder mystery style unity game that uses original assets and music made by us.
 
+
+
 # Controls
 
-W,A,S,D - Movement
-Shift - Dash
-I - Inventory
-E - Interact (Chests, NPCs, Shop)
-Mouse/Click - Aim/Attack
+<br>
+W,A,S,D - Movement <br>
+Shift - Dash <br>
+I - Inventory <br>
+E - Interact (Chests, NPCs, Shop) <br>
+Mouse/Click - Aim/Attack <br>
+<br>
+
+### How to Play
+<br>
+After cloning the repository, go to the folder named "Gone Is The King Exe" and there resides the exe for the game (from their click and run)
 
 # Documentation
 
