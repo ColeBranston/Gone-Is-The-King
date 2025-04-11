@@ -15,7 +15,7 @@ Mouse/Click - Aim/Attack <br>
 <br>
 
 ### How to Play
-<br>
+
 After cloning the repository, go to the folder named "Gone Is The King Exe" and there resides the exe for the game (from their click and run)
 
 # Documentation
